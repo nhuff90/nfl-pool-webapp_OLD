@@ -12,5 +12,5 @@ import java.util.List;
 public interface GameRepository extends JpaRepository<Game, Long> {
 
     @Query("SELECT g FROM Game g where g.week = :week")
-    List<Game> findGamesByWeek(@Param("week") Integer id);
+    List<Game> findGamesByWeek(@Param("week") Integer week);
 }

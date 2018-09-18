@@ -18,13 +18,15 @@ public class Game {
     private int homeScore;
     private int awayScore;
     private int week;
+    String gameProgress;
 
-    public Game(String homeTeam, int homeScore, String awayTeam, int awayScore, int week) {
+    public Game(String homeTeam, int homeScore, String awayTeam, int awayScore, int week, String gameProgress) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.homeScore = homeScore;
         this.awayScore = awayScore;
         this.week = week;
+        this.gameProgress = gameProgress;
     }
 
     public Long getId() {
@@ -75,6 +77,14 @@ public class Game {
         this.week = week;
     }
 
+    public String getGameProgress() {
+        return gameProgress;
+    }
+
+    public void setGameProgress(String gameProgress) {
+        this.gameProgress = gameProgress;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
@@ -84,6 +94,7 @@ public class Game {
                 ", homeScore=" + homeScore +
                 ", awayScore=" + awayScore +
                 ", week=" + week +
+                ", gameProgress='" + gameProgress + '\'' +
                 '}';
     }
 }

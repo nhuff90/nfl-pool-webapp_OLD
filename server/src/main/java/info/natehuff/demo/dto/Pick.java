@@ -13,11 +13,13 @@ public class Pick {
     @GeneratedValue
     private Long id;
     String name;
-    float line;
+    String line;
+    int week;
 
-    public Pick(String name, float line) {
+    public Pick(String name, String line, int week) {
         this.name = name;
         this.line = line;
+        this.week = week;
     }
 
     public String getName() {
@@ -28,12 +30,20 @@ public class Pick {
         this.name = name;
     }
 
-    public float getLine() {
+    public String getLine() {
         return line;
     }
 
-    public void setLine(int line) {
+    public void setLine(String line) {
         this.line = line;
+    }
+
+    public int getWeek() {
+        return week;
+    }
+
+    public void setWeek(int week) {
+        this.week = week;
     }
 
     @Override
@@ -42,6 +52,7 @@ public class Pick {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", line=" + line +
+                ", week=" + week +
                 '}';
     }
 }

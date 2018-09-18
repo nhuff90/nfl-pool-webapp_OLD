@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Component
 public class PickCommandLineRunner implements CommandLineRunner {
@@ -21,7 +20,7 @@ public class PickCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        List<Pick> picks = ReadPicksFile.readPicksFile();
+        List<Pick> picks = ReadPicksFile.readPicksFileByWeek(2);
 
         System.out.println(Arrays.toString(picks.toArray()));
 
